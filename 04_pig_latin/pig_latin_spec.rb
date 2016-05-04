@@ -64,6 +64,11 @@ describe "#translate" do
     s = translate("the quick brown fox")
     expect(s).to eq("ethay ickquay ownbray oxfay")
   end
+  
+  it "upcases new first letter of word which was capitalize" do
+    s = translate("the Quick brown Fox")
+    expect(s).to eq("ethay Ickquay ownbray Oxfay")
+  end
 
   # Test-driving bonus:
   # * write a test asserting that capitalized words are still capitalized (but with a different initial capital letter, of course)
