@@ -19,7 +19,7 @@ def first_word(sentence)
 end
 
 def titleize(sentence)
-  stop_words = %w{a an and or the for of nor over}
+  stop_words = %w{a an and or the for in of nor over}
   array = sentence.split
   array.map! { |x| stop_words.include?(x) && array.index(x) != 0 ? x : x.capitalize }.join(" ")
 end
